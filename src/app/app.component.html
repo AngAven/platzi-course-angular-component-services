@@ -1,6 +1,8 @@
-<p>Imagen de ejemplo:</p>
-<input type="text" [(ngModel)]="imgParent">
-<br>
-<app-img (loaded)="loadedImg($event)" [image]="imgParent" ></app-img>
+<p><input type="text" [(ngModel)]="imgParent"></p>
+<button (click)="toggleImage()">Toggle image</button>
+<p>{{showImage}}</p>
 
+<br>
+<app-img *ngIf="showImage" (loaded)="loadedImg($event)" [image]="imgParent" ></app-img>
+<hr>
 <app-product [product]="product" *ngFor="let product of products"></app-product>

@@ -8,7 +8,7 @@ import {Product} from "./models/product.model";
 })
 export class AppComponent {
   imgParent = 'https://images.unsplash.com/photo-1696321832425-a6871f33420f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3987&q=80/'
-
+  showImage = true
   products: Product[] = [
     {
       id: '1',
@@ -39,5 +39,9 @@ export class AppComponent {
 
   loadedImg(img: String){
     console.log('El padre ya sabe que cargo la imagen => ', img)
+  }
+
+  toggleImage(){
+    this.showImage = !this.showImage
   }
 }
