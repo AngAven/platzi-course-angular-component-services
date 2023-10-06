@@ -31,8 +31,8 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   @Input() alt: String = ''
   @Output() loaded = new EventEmitter<String>()
   imageDefault = 'https://images.unsplash.com/photo-1696247835082-2d6f7e528bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4140&q=80'
-  counter = 0
-  counterFunction: number | undefined
+  // counter = 0
+  // counterFunction: number | undefined
 
   constructor() {
     // Aqui no van cosas asincronas
@@ -46,10 +46,10 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     // Podemos correr cosas asincronas
     // Corre una sola vez antes de que inicie el render
     console.log('- ngOnInit -')
-    this.counterFunction = window.setInterval(() => {
-      this.counter ++
-      console.log('Se corre counter')
-    }, 1000)
+    // this.counterFunction = window.setInterval(() => {
+    //   this.counter ++
+    //   console.log('Se corre counter')
+    // }, 1000)
   }
 
   ngOnChanges(changes: SimpleChanges){
@@ -70,7 +70,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     //Cuando eliminamos el componente
     // Cuando el componente deja de existir
     console.log('- ngOnDestroy -')
-    window.clearInterval(this.counterFunction)
+    // window.clearInterval(this.counterFunction)
   }
 
   imgError(){
