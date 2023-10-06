@@ -1,0 +1,5 @@
+<img width="200px" [src]="image" alt="image" *ngIf="image; else elseImg">
+
+<ng-template #elseImg>
+  <img src="favicon.ico" alt="image">
+</ng-template>
