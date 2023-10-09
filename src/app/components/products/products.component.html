@@ -2,9 +2,17 @@
   La cantidad de productos son: {{myShoppingCart.length}}
 </p>
 <p>
-  Total ${{total}}
+  Total {{total | currency}}
 </p>
-
+<p>
+  Today: {{today | date: 'short' }}
+</p>
+<p>
+  Other Date: {{date | date: 'yyyy/MM/dd' }}
+</p>
+<p>
+  {{'hOLA BasCVASas' |uppercase }}
+</p>
 <div class="products--grid">
   <app-product
     [product]="product"
