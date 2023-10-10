@@ -83,6 +83,19 @@
   }
 }
 
+.counter-container{
+  position: relative;
+}
+
+.counter{
+  position: absolute;
+  top: -12px;
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  padding: 2px;
+}
+
 /* Large and up */
 @media screen and (min-width: 64em) {
   .show-mobile {
